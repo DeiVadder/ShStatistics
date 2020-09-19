@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/PistolTarget25m.jpg</file>
+        <file>images/crosshairs.png</file>
+    </qresource>
+</RCC>

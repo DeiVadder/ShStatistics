@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qtquickcontrols2.conf</file>
+        <file>qml/main.qml</file>
+        <file>qml/PageSelectImpact.qml</file>
+        <file>qml/PageSettings.qml</file>
+    </qresource>
+</RCC>

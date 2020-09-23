@@ -2,5 +2,7 @@
     <qresource prefix="/">
         <file>images/PistolTarget25m.jpg</file>
         <file>images/crosshairs.png</file>
+        <file>images/Buttons/MenuIcon.png</file>
+        <file>images/Buttons/SaveIcon.png</file>
     </qresource>
 </RCC>

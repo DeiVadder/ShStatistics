@@ -49,7 +49,7 @@ ApplicationWindow {
                 text: qsTr("New impact")
                 width: parent.width
                 onClicked: {
-                    stackView.push("PageSelectImpact.qml")
+                    stackView.push("Impact/PageSelectImpact.qml")
                     drawer.close()
                 }
             }
@@ -57,6 +57,7 @@ ApplicationWindow {
                 text: qsTr("Settings")
                 width: parent.width
                 onClicked: {
+                    stackView.push("PageSettings.qml")
                     drawer.close()
                 }
             }

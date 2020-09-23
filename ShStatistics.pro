@@ -9,6 +9,9 @@ DEFINES += QMLSOURCEDIR=\\\"$$PWD\\\"
 SOURCES += \
         cpp/ReadWrite/database.cpp \
         cpp/ReadWrite/preapptasks.cpp \
+        cpp/ReadWrite/settings.cpp \
+        cpp/backend.cpp \
+        cpp/backendproperties.cpp \
         cpp/main.cpp
 
 RESOURCES += qml.qrc \
@@ -30,4 +33,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     cpp/ReadWrite/database.h \
-    cpp/ReadWrite/preapptasks.h
+    cpp/ReadWrite/preapptasks.h \
+    cpp/ReadWrite/settings.h \
+    cpp/backend.h \
+    cpp/backendproperties.h

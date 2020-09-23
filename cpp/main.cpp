@@ -2,8 +2,11 @@
 #include <QQmlApplicationEngine>
 
 #include "cpp/ReadWrite/preapptasks.h"
+#include "cpp/ReadWrite/settings.h"
 
-#include "cpp/ReadWrite/database.h"
+//#include "cpp/ReadWrite/database.h"
+
+#include "backend.h"
 
 #include <QDebug>
 #include <QUuid>
@@ -33,6 +36,8 @@ int main(int argc, char *argv[])
 {
     PreAppTasks::setAppVariables();
 
+    QCoreApplication::setOrganizationName(QStringLiteral("JonasWorkshop"));
+    QCoreApplication::setApplicationName(QStringLiteral("CompetitionAnalytics"));
     QGuiApplication app(argc, argv);
     PreAppTasks::createAppFolder();
     PreAppTasks::addDefaultDataBasePath();
@@ -52,15 +57,22 @@ int main(int argc, char *argv[])
 
     qDebug() << Q_FUNC_INFO << PreAppTasks::DatabasePath();
 
+    Backend backend;
+    engine.rootContext()->setContextProperty("Backend", &backend);
+
+    Settings settings;
+    engine.rootContext()->setContextProperty("Setting", &settings);
+    /*
     Database db;
-
-
+    qDebug() << db.listOfAvailableTables();
     QUuid uuid;
     QString uid = uuid.createUuid().toString();
 
     for(int i{0}; i < 15; i++){
         db.addNewEntry((std::rand() % 100)/100., (std::rand() % 100)/100., (std::rand() % 10), 10, "Test",uid);
     }
+    */
+
 
     return app.exec();
 }

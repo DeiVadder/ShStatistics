@@ -2,7 +2,9 @@
     <qresource prefix="/">
         <file>qtquickcontrols2.conf</file>
         <file>qml/main.qml</file>
-        <file>qml/PageSelectImpact.qml</file>
         <file>qml/PageSettings.qml</file>
+        <file>qml/General/ComboboxUnit.qml</file>
+        <file>qml/Impact/ImpactMenu.qml</file>
+        <file>qml/Impact/PageSelectImpact.qml</file>
     </qresource>
 </RCC>
